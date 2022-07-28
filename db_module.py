@@ -2,19 +2,21 @@ import sqlite3
 import random
 import string
 
-
+'''
 def get_random_string(length):
     # With combination of lower and upper case
     result_str = ''.join(random.choice(string.ascii_letters) for i in range(length))
     # print random string
     print(result_str)
     return result_str
+'''
 
+file = 'LogsDB'
 
 def create_db():
     conn = None
     try:
-        conn = sqlite3.connect(get_random_string(6))
+        conn = sqlite3.connect(file)
         print("Database formed.")
     except:
         print("Database not formed.")
